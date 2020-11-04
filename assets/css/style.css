@@ -1,0 +1,27 @@
+*{
+    margin-top: 5px;
+    
+}
+body{
+    background-color: white;
+    white-space: nowrap;
+    padding-left: 10px;   
+}
+.container{
+    background-color: rgb(245,239,232);
+}
+
+
+label {
+ margin-right: 20px;
+ }
+ .dew{
+    display: none;
+ }
+ .PTZ {
+    display: none;
+  }
+
+  .Dew {
+    display: none;
+  }

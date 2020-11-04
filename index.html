@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CCT V2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon"
+    href="https://www.salientsys.com/assets/uploads/images/logos/_192x192_crop_center-center_100_none/apple-icon.png" />
+  <script src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+  <header class="text-center">
+    <h1 class="text-danger">Salient Systems</h1>
+    <h3 class="text-secondary">Camera Certification Template V2</h3class="text-secondary">
+  </header>
+  <div class="container">
+    <form class="text-secondary">
+      <!-- Name of tester -->
+      <div class="row">
+        <div class="col-2">
+          <label>Tester:
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control testerName" value="" placeholder="Name" required>
+        </div>
+      </div>
+
+      <!-- CV Version -->
+      <div class="row">
+        <div class="col-2">
+          <label>CV Version:
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control cvVersion" value="" placeholder="CV Version" required>
+        </div>
+      </div>
+
+      <!-- Windows Version -->
+      <div class="row">
+        <div class="col-2">
+          <label>Windows Version:
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control vWer" placeholder="Machaine Specs">
+        </div>
+      </div>
+
+      <!-- Drivers -->
+      <!-- <div class="addDriver">
+        <div class="row">
+          <div class="col-2">
+            <label >Driver(s)
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control drive-1" placeholder="Driver">
+          </div>
+          <div class="col-2">
+            <button type="button " class="btn btn-light plusDriver">+</button>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Manufacturer /   Model -->
+      <div class="row">
+        <div class="col-2">
+          <label>Manufacturer/Model:
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control manfu" value="" placeholder="Manufacturer" required>
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control model" value="" placeholder="Model" required>
+        </div>
+      </div>
+
+      <!-- Camera's IP -->
+      <div class="row">
+        <div class="col-2">
+          <label>Camera's IP:
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip1" value="" maxlength="3" placeholder="xxx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip2" value="" maxlength="3" placeholder="xxx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip3" value="" maxlength="3" placeholder="xxx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip4" value="" maxlength="3" placeholder="xxx" required>
+        </div>
+      </div>
+
+      <!-- Mac address -->
+      <div class="row">
+        <div class="col-2">
+          <label>Mac Address:
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac1" value="" maxlength="2" placeholder="xx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac2" value="" maxlength="2" placeholder="xx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac3" value="" maxlength="2" placeholder="xx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac4" value="" maxlength="2" placeholder="xx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac5" value="" maxlength="2" placeholder="xx" required>
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac6" value="" maxlength="2" placeholder="xx" required>
+        </div>
+      </div>
+
+      <!-- Type -->
+      <div class="row">
+        <div class="col-2">
+          <label>Device Type:
+        </div>
+        <div class="col-3">
+          <select class="ui search dropdown deviceType deviceTypeCheck">
+            <option class="deviceTypeValue" value="">Device type list </option>
+          </select>
+        </div>
+        <div class="col-4">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input check" id="checkType" id="materialInline1">
+            <input type="text" class="form-control newTypeCheck" disabled="disabled" value=""
+              placeholder="Add new device type">
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- compressions -->
+      <div class="row">
+        <div class="col-2">
+          <label>Compressions:</label>
+        </div>
+        <div class="col-10">
+          <!-- H264  -->
+          <div class="row">
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input  h264Check" value="No" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">H264</label>
+              </div>
+            </div>
+            <div class="col-1">
+              <!-- TCP -->
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input tcpH264" value="No" disabled="disabled" id="materialInline1">
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
+              </div>
+            </div>
+            <!-- UDP -->
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input udpH264" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">UDP</label>
+              </div>
+            </div>
+            <!-- Audio -->
+            <div class="col-1">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioH264" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+            </div>
+            <!-- Generic -->
+            <div class="col-2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input gH264" value="" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Generic</label>
+              </div>
+            </div>
+            <!-- URL/Driver -->
+            <div class="col-6">
+              <input type="text" class="form-control urlH264Check" disabled="disabled" placeholder="URL/Driver">
+              <label class="driverH264" disabled="disabled"></label>
+            </div>
+          </div>
+
+
+          <!-- H265  -->
+          <div class="row">
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input  h265Check" value="No" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">H265</label>
+              </div>
+            </div>
+            <div class="col-1">
+              <!-- TCP -->
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input tcpH265" value="No" disabled="disabled" id="materialInline1">
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
+              </div>
+            </div>
+            <!-- UDP -->
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input udpH265" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">UDP</label>
+              </div>
+            </div>
+            <!-- Audio -->
+            <div class="col-1">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioH265" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+            </div>
+            <!-- Generic -->
+            <div class="col-2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input gH265" value=""  disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Generic</label>
+              </div>
+            </div>
+            <!-- URL/Driver -->
+            <div class="col-6">
+              <input type="text" class="form-control urlH265Check" disabled="disabled" placeholder="URL/Driver">
+              <label class="driverH265" disabled="disabled"></label>
+            </div>
+          </div>
+
+          <!-- MJPEG  -->
+          <div class="row">
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input  mjpegCheck" value="No" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">MJPEG</label>
+              </div>
+            </div>
+            <div class="col-1">
+              <!-- TCP -->
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input tcpMJPEG" value="No"  disabled="disabled" id="materialInline1">
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
+              </div>
+            </div>
+            <!-- UDP -->
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input udpMJPEG" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">UDP</label>
+              </div>
+            </div>
+            <!-- Audio -->
+            <div class="col-1">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioMJPEG" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+            </div>
+            <!-- Generic -->
+            <div class="col-2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input gMJPEG" value="" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Generic</label>
+              </div>
+            </div>
+            <!-- URL/Driver -->
+            <div class="col-6">
+              <input type="text" class="form-control urlMJPEGCheck" disabled="disabled" placeholder="URL/Driver">
+              <label class="driverMJPEG" disabled="disabled"></label>
+            </div>
+          </div>
+
+          <!-- MPEG-4  -->
+          <div class="row">
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input  mpeg4Check" value="No" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">MP4</label>
+              </div>
+            </div>
+            <div class="col-1">
+              <!-- TCP -->
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input tcpMPEG4" value="No" disabled="disabled" id="materialInline1">
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
+              </div>
+            </div>
+            <!-- UDP -->
+            <div class="col-1">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input udpMPEG4" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">UDP</label>
+              </div>
+            </div>
+            <!-- Audio -->
+            <div class="col-1">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioMPEG4" value="No" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+            </div>
+            <!-- Generic -->
+            <div class="col-2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input gMPEG4" value="" disabled="disabled" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Generic</label>
+              </div>
+            </div>
+            <!-- URL/Driver -->
+            <div class="col-6">
+              <input type="text" class="form-control urlMPEG4Check" disabled="disabled" placeholder="URL/Driver">
+              <label class="driverMPEG4" disabled="disabled"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Streams Channel/Stream count -->
+      <div class="row">
+        <!-- CH -->
+        <div class="col-2">
+          <label>Channel count:
+        </div>
+        <div class="input-group col-2">
+          <input type="number" class="form-control chCount "  value="" maxlength="2" required>
+        </div>
+        <!-- ID -->
+        <div class="col-2">
+          <label>Stream count:
+        </div>
+        <div class="input-group col-2">
+          <input type="number" class="form-control streamId "  value="" maxlength="2" required>
+        </div>
+      </div>
+
+
+
+      <!-- UserName/passwords -->
+      <div class="row">
+        <div class="col-2">
+          <label>Login Credentials:
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control  uName" value="" placeholder="User Name" required>
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control pWord" value="" placeholder="Password" required>
+        </div>
+      </div>
+
+      <!-- FW V-->
+      <div class="row">
+        <div class="col-2">
+          <label>FW Version:
+        </div>
+
+        <div class="col-4">
+
+          <input type="text" class="form-control fwVersion" value="" placeholder="FW" required>
+        </div>
+        <div class="col-1">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input updated" value="">
+            <label class="form-check-label ">Updated</label>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+      <!-- PTZ -->
+      <div class="row">
+        <div class="col-2">
+          <label>PTZ Capable:
+        </div>
+        <div class="col-8">
+          <div id="ptzs" value="">
+            <input type="radio" id="ptzCV" name="ptz" value="CV supports PTZ" required> CV supports PTZ
+            <input type="radio" id="ptzC" name="ptz" value="Camera supports PTZ"> Camera supports PTZ
+            <input type="radio" id="ptzCD" name="ptz" value="Camera doesn't support PTZ"> Camera doesn't support PTZ
+          </div>
+        </div>
+      </div>
+
+      <!-- PTZ support list -->
+      <div class="PTZ">
+
+        <!-- PTZ Driver Used -->
+        <div class="row">
+
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>PTZ Driver Used
+          </div>
+          <div class="col-2">
+            <select class="ui search dropdown ptzList ptzDriverValue" value="">
+              <option value="">PTZ Drivers list </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PTZ ID Used -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>PTZ ID Used
+          </div>
+          <div class="col-2">
+            <input type="text" class="form-control ptzId" value="" placeholder="ID">
+          </div>
+
+        </div>
+
+        <!-- Pan/Tilt Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Pan/Tilt Buttons
+          </div>
+          <div class="col-4">
+            <div id="panTilts" value="">
+              <input type="radio" id="panTiltP" name="panTilt" value="Pass"> Pass
+              <input type="radio" id="panTiltF" name="panTilt" value="Failed"> Failed
+              <input type="radio" id="panTiltNS" name="panTilt" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+        <!-- Zoom In/Out Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Zoom In/Out Buttons
+          </div>
+          <div class="col-4">
+            <div id="zooms" value="">
+              <input type="radio" id="zoomP" name="zoom" value="Pass"> Pass
+              <input type="radio" id="zoomF" name="zoom" value="Failed"> Failed
+              <input type="radio" id="zoomNS" name="zoom" value="Not supported"> Not supported
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Iris Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Iris Buttons
+          </div>
+          <div class="col-4">
+            <div id="iriss" value="None">
+              <input type="radio" id="irisP" name="iris" value="Pass"> Pass
+              <input type="radio" id="irisF" name="iris" value="Failed"> Failed
+              <input type="radio" id="irisNS" name="iris" value="Not supported"> Not supported
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Focus Buttons  -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Focus Buttons
+          </div>
+          <div class="col-4" value="">
+            <div id="focuss">
+              <input type="radio" id="focusP" name="focus" value="Pass"> Pass
+              <input type="radio" id="focusF" name="focus" value="Failed"> Failed
+              <input type="radio" id="focusNS" name="focus" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto Iris  -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Auto Iris
+          </div>
+          <div class="col-4">
+            <div id="aIRISs" value="None">
+              <input type="radio" id="aIRISP" name="aIRIS" value="Pass"> Pass
+              <input type="radio" id="aIRISF" name="aIRIS" value="Failed"> Failed
+              <input type="radio" id="aIRISNS" name="aIRIS" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Auto Focus -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Auto Focus
+          </div>
+          <div class="col-4">
+            <div id="aFocuss" value="">
+              <input type="radio" id="aFocusP" name="aFocus" value="Pass"> Pass
+              <input type="radio" id="aFocusF" name="aFocus" value="Failed"> Failed
+              <input type="radio" id="aFocusNS" name="aFocus" value="Not supported"> Not supported
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PTZ Speed Adjust -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>PTZ Speed Adjust
+          </div>
+          <div class="col-4">
+            <div id="ptzSppeds" value="">
+              <input type="radio" id="ptzSppedP" name="ptzSpped" value="Pass"> Pass
+              <input type="radio" id="ptzSppedF" name="ptzSpped" value="Failed"> Failed
+              <input type="radio" id="ptzSppedNS" name="ptzSpped" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Preset Position Set -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Preset Position Set
+          </div>
+          <div class="col-4">
+            <div id="presetSets" value="">
+              <input type="radio" id="presetSetP" name="presetSet" value="Pass"> Pass
+              <input type="radio" id="presetSetF" name="presetSet" value="Failed"> Failed
+              <input type="radio" id="presetSetNS" name="presetSet" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Preset Position Show -->
+        <div class="row">
+          <div class="col-1">
+            <label>
+          </div>
+          <div class="col-4">
+            <label>Preset Position Show
+          </div>
+          <div class="col-4">
+            <div id="presetShows" value="">
+              <input type="radio" id="presetShowP" name="presetShow" value="Pass"> Pass
+              <input type="radio" id="presetShowF" name="presetShow" value="Failed"> Failed
+              <input type="radio" id="presetShowNS" name="presetShow" value="Not supported"> Not supported
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dewarping -->
+      <div class="row">
+        <div class="col-2">
+          <label>Dewarping:
+        </div>
+        <div class="col-8">
+          <div id="dewarpings" value="">
+            <input type="radio" id="dewarpingCVP" name="dewarping" value="CV supports dewarping" required> CV supports
+            dewarping
+            <input type="radio" id="dewarpingCVF" name="dewarping" value="CV doesn't support dewarping"> CV doesn't support dewarping
+            <input type="radio" id="dewarpingCNS" name="dewarping" value="Camera doesn't support dewarping"> Camera doesn't support dewarping
+          </div>
+        </div>
+      </div>
+
+      <!-- Dewarping Driver Used -->
+      <div class="dew" display="None">
+        <div class="row ">
+          <div class="col-1">
+          </div>
+          <div class="col-4">
+            <label>Dewarping Driver
+          </div>
+          <div class="col-4">
+            <select class="ui search dropdown dewarpingT">
+              <option value="">Drivers list </option>
+            </select>
+          </div>
+          <div class="col-2">
+            <select class="ui search dropdown dewarpingP">
+              <option value="">Lens Profile</option>
+
+            </select>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Events -->
+      <div class="row">
+        <div class="col-2">
+          <label>On-Camera events:
+        </div>
+        <div class="col-8">
+          <div id="events" value="">
+            <input type="radio" id="eventCVP" name="event" value="CV supports events" required> CV supports events
+            <input type="radio" id="eventCVF" name="event" value="CV doesn't support events"> CV doesn't support
+            event
+            <input type="radio" id="eventCNS" name="event" value="Camera doesn't support events"> CV doesn't support events
+          </div>
+        </div>
+      </div>
+
+      <!-- Testing Level -->
+      <div class="row">
+        <div class="col-2">
+          <label>Testing Level:
+        </div>
+        <div class="col-8">
+          <div id="testLs" value="">
+            <input type="radio" id="testL1" name="testL" value="Level 1" required> Level 1
+            <input type="radio" id="testL2" name="testL" value="Level 2"> Level 2
+          </div>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label for="comment">Notes:</label>
+        <textarea class="form-control note" rows="5" id="comment"></textarea>
+      </div>
+
+
+      <button type="submit" class="btn btn-danger float-right submitB">Submit</button>
+    </form>
+  </div>
+
+
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+    integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+    crossorigin="anonymous"></script>
+
+
+  <!-- JS  Jquery-->
+  <script src="/assets/javascript/app.js"></script>
+</body>
+
+</html>
